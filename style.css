@@ -1,0 +1,186 @@
+:root {
+  --pale-blue-color: hsl(225, 100%, 94%);
+  --bright-blue-color: hsl(245, 75%, 52%);
+  --very-pale-blue-color: hsl(225, 100%, 98%);
+  --desaturated-blue-color: hsl(224, 23%, 55%);
+  --dark-blue-color: hsl(223, 47%, 23%);
+  background-color: var(--pale-blue-color);
+  font-family: 'Red Hat Display', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+  background-image: url('./images/pattern-background-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.wrapper {
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 40px 40px -20px rgba(13, 48, 189, 0.15);
+}
+
+.img {
+  display: block;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.inner-wrapper {
+  padding: 32px 24px;
+}
+
+.heading {
+  font-weight: 900;
+  font-size: 22px;
+  color: var(--dark-blue-color);
+  text-align: center;
+}
+
+.desc {
+  margin-top: 16px;
+  padding: 0 12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.55;
+  letter-spacing: -0.2px;
+  color: var(--desaturated-blue-color);
+  text-align: center;
+}
+
+.plan {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 25px;
+  padding: 16px;
+  border-radius: 11px;
+  background-color: var(--very-pale-blue-color);
+}
+
+.plan__title {
+  font-weight: 900;
+  font-size: 14px;
+  color: var(--dark-blue-color);
+}
+
+.plan__price {
+  margin-top: 2px;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--desaturated-blue-color);
+}
+
+.plan__change-btn {
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: underline;
+  color: var(--bright-blue-color);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.plan__change-btn:hover {
+  color: hsl(245, 83%, 68%);
+  text-decoration: none;
+}
+
+.payment__btn {
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 11px;
+  background-color: var(--bright-blue-color);
+  font-weight: 900;
+  font-size: 15px;
+  color: white;
+  box-shadow: 0 20px 20px 0px rgba(56, 42, 225, 0.19);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.payment__btn:hover {
+  background-color: hsl(245, 83%, 68%);
+}
+
+.cancel__btn {
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  color: var(--desaturated-blue-color);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.cancel__btn:hover {
+  color: var(--dark-blue-color);
+}
+
+@media all and (min-width: 600px) {
+  body {
+    background-image: url('./images/pattern-background-desktop.svg');
+  }
+
+  .wrapper {
+    width: 500px;
+  }
+
+  .inner-wrapper {
+    padding: 48px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .desc {
+    padding: 0 16px;
+    font-size: 17px;
+  }
+
+  .plan {
+    margin-top: 20px;
+    padding: 24px;
+  }
+
+  .plan__title {
+    font-size: 16px;
+  }
+
+  .plan__price {
+    margin-top: 5px;
+    font-size: 17px;
+  }
+
+  .plan__change-btn {
+    font-size: 15px;
+  }
+
+  .payment__btn,
+  .cancel__btn {
+    margin-top: 32px;
+  }
+}
